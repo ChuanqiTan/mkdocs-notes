@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Markdown - Chuanqi's Docs</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">Chuanqi's Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Welcome to MkDocs</a>
+                            </li>
+                            <li class="active">
+                                <a href="./">Markdown</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="..">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="disabled">
+                                <a rel="prev" >
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#markdown">Markdown</a></li>
+            <li><a href="#_1">标题</a></li>
+            <li><a href="#_2">段落及区块引用</a></li>
+            <li><a href="#_3">链接或图片</a></li>
+            <li><a href="#_4">列表</a></li>
+            <li><a href="#_6">分隔线</a></li>
+            <li><a href="#_7">强调</a></li>
+            <li><a href="#_8">插入代码块</a></li>
+            <li><a href="#table">table 插入表格</a></li>
+            <li><a href="#_9">特殊符号处理</a></li>
+            <li><a href="#markdown_1">Markdown软件推荐</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="markdown">Markdown</h1>
+<p>Markdown太简单了，任何智商正常的人都可以在15分钟内学会。这也是它为什么如此流行的原因，伟大的东西一定是简单的。
+相比下，Rst 太复杂了，注定不会流行的。
+记住，Markdown最终都要被转换成HTML，所以也可以直接在里面用HTML。</p>
+<h2 id="_1">标题</h2>
+<p>Markdown支持6种级别的标题，对应html标签 h1 ~ h6</p>
+<pre><code># h1
+## h2
+### h3
+#### h4
+##### h5
+###### h6
+</code></pre>
+
+<h2 id="_2">段落及区块引用</h2>
+<pre><code>Markdown分段非常简单，前后至少保留一个空行即可。
+</code></pre>
+<p>而另外一个比较常见的需求就是，我们可能希望对某段文字进行强调处理。Markdown提供了一个特殊符号<code>&gt;</code>用于段首进行强调，被强调的文字部分将会高亮显示</p>
+<pre><code>&gt; 这段文字将被高亮显示...
+</code></pre>
+
+<p>效果如下：</p>
+<blockquote>
+<p>这段文字将被高亮显示...</p>
+</blockquote>
+<h2 id="_3">链接或图片</h2>
+<pre><code>[点击跳转至百度](http://www.baidu.com)
+
+![图片](https://www.baidu.com/img/bd_logo1.png)
+</code></pre>
+
+<p><a href="http://www.baidu.com">点击跳转至百度</a></p>
+<p><img alt="图片" src="https://www.baidu.com/img/bd_logo1.png" /></p>
+<h2 id="_4">列表</h2>
+<p>Markdown支持有序列表和无序列表两种形式：</p>
+<ul>
+<li>无序列表使用*或+或-标识</li>
+<li>有序列表使用数字加.标识，例如：1.</li>
+</ul>
+<h3 id="_5">使用列表的一些注意事项</h3>
+<ul>
+<li>
+<p>对于有序列表，Markdown将只关注你的第一个项目的数字编号。例如：如果第一个项目编号是3，以此类推，第二个项目应该是4，最终将显示为3、4、5。而如果你指定了第一个编号，后面的编号指定错误也没有关系，Markdown将只在乎你的第一个项目编号。</p>
+</li>
+<li>
+<p>如果在单一列表项中包含了多个段落，为了保证渲染正常，*与段落首字母之间必须保留四个空格</p>
+</li>
+<li>
+<p>另外，如果在列表中加入了区块引用，区域引用标记符也需要缩进4个空格</p>
+</li>
+</ul>
+<blockquote>
+<p>注：记住一个原则，如果在和列表配合使用的时候出现了问题，就缩进一次，四个空格或者一个制表符代表一次缩进。如果一次缩进没有解决问题，那就两次。</p>
+</blockquote>
+<h2 id="_6">分隔线</h2>
+<p>有时候，为了排版漂亮，可能会加入分隔线。Markdown加入分隔线非常简单，使用下面任意一种形式都可以</p>
+<pre><code>***
+---
+</code></pre>
+
+<hr />
+<h2 id="_7">强调</h2>
+<p>有时候，我们希望对某一部分文字进行强调，使用*或_包裹即可。使用单一符号标记的效果是斜体，使用两个符号标记的效果是加粗</p>
+<h2 id="_8">插入代码块</h2>
+<p>Markdown在IT圈子里面比较流行的一个重要原因是，它能够轻松漂亮地插入代码。
+方法是，使用反引号`进行包裹即可。</p>
+<ul>
+<li>如果是行内代码引用，使用单个反引号进行包裹</li>
+<li>如果插入一整段代码，需要使用三个及以上的反引号进行包裹</li>
+</ul>
+<h2 id="table">table 插入表格</h2>
+<p>表格是Markdown语法中比较复杂的一个，其语法如下：</p>
+<pre><code>表头|条目一|条目二
+:---:|:---:|:---:
+项目|项目一|项目二
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="center">表头</th>
+<th align="center">条目一</th>
+<th align="center">条目二</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">项目</td>
+<td align="center">项目一</td>
+<td align="center">项目二</td>
+</tr>
+<tr>
+<td align="center">项目</td>
+<td align="center">项目一</td>
+<td align="center">项目二</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注：三个短斜杠左右的冒号用于控制对齐方式，只放置左边冒号表示文字居左，只放置右边冒号表示文字居右，如果两边都放置冒号表示文字居中。</p>
+</blockquote>
+<h2 id="_9">特殊符号处理</h2>
+<p>Markdown使用反斜杠\插入语法中用到的特殊符号。在Markdown中，主要有以下几种特殊符号需要处理：</p>
+<pre><code>\   反斜线
+`   反引号
+*   星号
+_   底线
+{}  花括号
+[]  方括号
+()  括弧
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   惊叹号
+</code></pre>
+
+<h2 id="markdown_1">Markdown软件推荐</h2>
+<p>如果你是一个Mac用户，我推荐你使用开源的 MacDown。
+如果你愿意花钱的话，一些收费产品其实更好。例如：Byword，Ulysses，Typora等等都很不错。</p>
+<p>日常使用，我就用Macdown。写书，我就用Ulysses。</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
